@@ -1,0 +1,46 @@
+body {
+    background-color: #ccffff;
+    color: white;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+}
+
+.table-head {
+    position: fixed;
+    background-color: #3333ff;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 10px;
+}
+
+#link-box {
+    background-color: #3399ff;
+    max-width: 500px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    outline: 2px solid black;
+    box-shadow: 3px 3px 5px grey;
+}
+
+a {
+    color: white;
+}
+
+.top-spacer {
+    margin-top: 90px;
+}
+
+.time-stamp {
+    font-size: 10px;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.permalink {
+    font-size: 10px;
+    text-align: right;
+    margin-top: 5px;
+}

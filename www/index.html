@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <Title>Rising Stories</Title>
+    <meta http-equiv="refresh" content="300"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="jquery-3.0.0.js"></script>
+    <script>
+        $.getJSON('stories.json', function( data ) {
+            var items = [];
+            $.each(data, function(key, value) {
+                var newDiv = $("<div>", {
+                    id: "testdiv"
+                });
+                
+                var link = $("<a>", {
+                    href: value.url,
+                    text: value.title
+                });
+                
+                $("body").append(newDiv);
+                
+                $(link).appendTo("#testdiv");
+                
+	        var cDate = new Date(value.created * 1000);
+
+                var timeStamp = $("<div>", {
+	            text: cDate,
+	            class: "time-stamp"
+	        });
+	        
+	        var permalink = $("<div>", {class: "permalink"}).append($("<a>", {
+	            href: value.permalink,
+	            text: "thread",
+	        }));
+
+	        $(permalink).appendTo("#testdiv");
+
+	        $(timeStamp).appendTo("#testdiv");
+
+                $("#testdiv").removeAttr("id").attr("id","link-box");
+                
+                });
+            });
+    </script>
+</head>
+    
+<body>
+    <div class="table-head"><h1>Breaking News</h1></div>
+    <div class="top-spacer"></div>
+</body>
+    
+</html>
