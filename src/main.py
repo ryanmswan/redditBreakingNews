@@ -6,12 +6,10 @@ from configparser import ConfigParser
 # import re
 # from collections import OrderedDict
 
-# To Do List
-# Check multiple subs
-# Animate appearance and disappearance of new fields
+current_dir = os.path.abspath()
 
 config = ConfigParser()
-config.read('settings.cfg')
+config.read(current_dir + '/settings.cfg')
 
 # Set parameters
 # amount of time a story has to reach the top stories
